@@ -7,6 +7,11 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+/**
+ * 显示窗口
+ * @author xiaowenxuan
+ *
+ */
 public class ShowFrame extends JFrame {
 
 	private ShowPanel contentPane;
@@ -17,7 +22,7 @@ public class ShowFrame extends JFrame {
 	 */
 	public ShowFrame() {
 		setVisible(true);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 650, 650);
 		contentPane = new ShowPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

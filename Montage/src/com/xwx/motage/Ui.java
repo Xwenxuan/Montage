@@ -30,6 +30,11 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.awt.event.ActionEvent;
 
+/**
+ * 程序开始
+ * @author xiaowenxuan
+ *
+ */
 public class Ui extends JFrame {
 
 	private Panel contentPane;
@@ -62,6 +67,7 @@ public class Ui extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		setTitle("");
 		
 		JButton begin = new JButton("开始");
 		begin.addActionListener(new ActionListener() {
@@ -135,7 +141,7 @@ public class Ui extends JFrame {
 			}
 		});
 		begin.setBackground(Color.GRAY);
-		begin.setBounds(405, 178, 123, 29);
+		begin.setBounds(405, 298, 123, 29);
 //		ImageIcon icon = new ImageIcon(
 //				"C:\\Users\\xiaowenxuan\\Desktop\\bg.jpg");
 //		Image temp = icon.getImage().getScaledInstance(
@@ -146,7 +152,17 @@ public class Ui extends JFrame {
 		
 		input = new JTextField();
 		
-		input.setBounds(68, 179, 322, 27);
+		JButton addImg = new JButton("上传图片");
+		addImg.setBackground(Color.GRAY);
+		addImg.setBounds(24, 298, 123, 29);
+		contentPane.add(addImg);
+		addImg.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+				UploadImg upLoad = new UploadImg();
+			}
+		});
+		input.setBounds(230, 175, 80, 27);
 		contentPane.add(input);
 		input.setColumns(10);
 	}

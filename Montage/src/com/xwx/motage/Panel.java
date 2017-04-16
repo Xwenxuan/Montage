@@ -8,6 +8,11 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
+/**
+ * 背景图片
+ * @author xiaowenxuan
+ *
+ */
 public class Panel extends JPanel{
 	BufferedImage img;
     
